@@ -1,6 +1,6 @@
 /* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-        /* 
+/* 
         
         Spacing 
 
@@ -47,35 +47,44 @@
 
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
-body {
-    font-family: 'Arial', sans-serif; /* Substitute with the exact font if known */
-    color: #000;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-}
 
 header {
     text-align: center;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 3em; /* Adjust as needed */
+    font-size: 3em;
     font-weight: bold;
 }
 
 .highlight {
-    font-size: 5em; /* Adjust as needed */
     font-weight: bolder;
-    /* Clipping mask for the image inside the text, or use a background-image with the right blend mode */
+    font-size: larger;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+}
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+    padding: 20px 0;
+    background: #eaeaea;
+}
+
+footer a {
+    color: #c0c0c0;
+    text-decoration: none;
 }
 
 nav {
     text-transform: uppercase;
     display: flex;
     justify-content: space-around;
-    background: #eaeaea; /* Light grey background */
+    background: #eaeaea;
     padding: 10px 0;
 }
 
@@ -86,39 +95,68 @@ nav a {
 }
 
 nav a.active {
-    color: #c0c0c0; /* Active link color */
+    color: #c0c0c0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #555;
+}
+
+main {
+    display: flex;
+ }
+
+.main-section {
+    flex: 3;
+}
+
+sidebar {
+    flex: 1;
 }
 
 article {
-    /* Set max-width to control the width of the text */
-    max-width: 60%; /* Adjust as needed */
-    margin: 0 auto;
+
 }
 
-.article-image {
+article img {
+    size: 100px;
     float: left;
-    margin-right: 20px; /* Adjust as needed */
-    width: 30%; /* Adjust as needed */
+    padding-left: 0;
 }
 
-figcaption {
-    font-style: italic;
-    font-size: 0.9em; /* Adjust as needed */
+.image-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
-aside {
-    float: right;
-    width: 30%; /* Adjust as needed */
+.image-bar figure {
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-footer {
-    font-size: 0.75em; /* Adjust as needed */
-    text-align: center;
-    padding: 20px 0;
-    background: #eaeaea; /* Light grey background */
-}
-
-footer a {
-    color: #c0c0c0; /* Footer link color */
-    text-decoration: none;
+.image-bar img {
+    width: 100%; /* This will make the image fill the column */
+    height: auto; /* Keep the aspect ratio of the image */
 }
